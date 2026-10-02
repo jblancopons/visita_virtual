@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Servofluid · Visita del despacho</title>
+<style>
+:root{color-scheme:dark;--bg:#151719;--panel:#202327;--muted:#b6b8bc;--accent:#e90029}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f8f8f8;font:15px/1.5 system-ui,sans-serif}header{max-width:1440px;margin:auto;padding:26px 24px 16px;display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:25px;margin:0;font-weight:650;letter-spacing:-.5px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:0 0 5px}.badge{border:1px solid #45494f;border-radius:100px;padding:7px 12px;color:#ddd;white-space:nowrap}main{max-width:1440px;padding:0 24px 30px;margin:auto}.tabs{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}button,a.download{border:1px solid #464a50;background:var(--panel);color:inherit;border-radius:8px;padding:9px 14px;cursor:pointer;font:inherit;text-decoration:none}button:hover,a.download:hover{border-color:#aaa}button[aria-pressed=true]{border-color:var(--accent);background:#4a1520}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}.stage{position:relative;background:#0d0f11;border-radius:12px;overflow:hidden}#hero{display:block;width:100%;height:min(65vh,780px);object-fit:contain}.bar{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--panel);padding:12px 16px}.caption{font-size:16px;font-weight:600}.count{color:var(--muted);font-size:13px}.controls{display:flex;gap:8px;align-items:center}.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0}.thumb{padding:0;overflow:hidden;text-align:left;border-radius:8px}.thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.thumb span{display:block;font-size:12px;padding:8px 10px}.notes{color:var(--muted);font-size:13px;border-top:1px solid #383c40;padding-top:14px}.notes p{margin:5px 0}.notes a{color:#eee}.sources{display:flex;gap:18px;flex-wrap:wrap}body.full .stage{position:fixed;inset:0;z-index:5;border-radius:0}body.full #hero{height:calc(100vh - 67px)}@media(max-width:700px){header{align-items:flex-start}h1{font-size:21px}.badge{display:none}main,header{padding-left:12px;padding-right:12px}.thumbs{grid-template-columns:repeat(3,1fr)}#hero{height:43vh}.bar{flex-wrap:wrap}.controls button{padding:8px 12px}}
+</style>
+</head>
+<body>
+<header><div><p class="eyebrow">Servo Fluid · Despacho de dirección</p><h1>Recorrido visual del despacho</h1></div><span class="badge">5 vistas · Aparador corregido</span></header>
+<main>
+<nav class="tabs" aria-label="Tipo de vista"><button id="future" aria-pressed="true">Despacho propuesto</button><button id="before" aria-pressed="false">Estado actual</button></nav>
+<div class="stage" id="stage">
+<img id="hero" src="04-desde-direccion.png" alt="Vista hacia la entrada con aparador corregido bajo la TV">
+<div class="bar"><div><div class="caption" id="caption">Desde dirección · Aparador corregido</div><div class="count" id="count">Vista 3 de 5</div></div><div class="controls"><button id="prev" aria-label="Vista anterior">←</button><button id="next" aria-label="Vista siguiente">→</button><button id="enlarge">Ampliar</button><a class="download" id="download" href="04-desde-direccion.png" download>Descargar imagen</a></div></div>
+</div>
+<nav id="thumbs" class="thumbs" aria-label="Seleccionar punto del recorrido"></nav>
+<div class="notes">
+<p><strong>Medida confirmada de la estantería:</strong> 180 cm de alto × 180 cm de ancho × 40 cm de fondo. Diseño abierto Stockholm de Punt, con baldas de nogal y paneles de aluminio y madera alistonada.</p>
+<p><strong>Medidas actualizadas del aparador:</strong> 122 cm de ancho × 46 cm de fondo × 91 cm de alto. Diseño según la foto web: puerta lisa a la izquierda, puerta alistonada a la derecha, bandeja superior de bronce y patas negras finas. TV de 75″ y formato 16:9: unos 166 cm de ancho; el aparador equivale al 73,5 % de ese ancho antes de aplicar la perspectiva.</p>
+<p>Imágenes ilustrativas generadas y editadas a partir de las referencias del proyecto. No proceden de un único modelo 3D acotado: pueden existir diferencias de detalle entre vistas. La escala y la configuración especial requieren comprobación técnica antes de fabricación o instalación.</p>
+<div class="sources"><a href="https://www.muebleslluesma.com/librerias-de-salon/28820-estanteria-stockholm-ste630-ste630-punt.html?utm_source=chatgpt.com" target="_blank" rel="noopener">Referencia de la estantería</a><a href="https://www.muebleslluesma.com/vitrinas-de-salon-y-comedor/23054-26675275-aparador-stockholm-sth224-punt.html#/14021-sobre-bronce/21193-zocalo-negro/31399-estructura-b_nogal_super_mate/106768-modelo-sth224_profundidad_46cm/119923-pasacables-sin_pasacables" target="_blank" rel="noopener">Referencia del aparador</a></div>
+</div>
+</main>
+<script>
+const proposal=[
+{src:'02-desde-ventanas.png',title:'Desde las ventanas hacia dirección'},
+{src:'03-direccion-estanteria-corregida.png',title:'Zona de dirección · Estantería corregida'},
+{src:'04-desde-direccion.png',title:'Desde dirección · Aparador corregido'},
+{src:'05-reuniones.png',title:'Zona de reuniones'},
+{src:'06-esquina-posterior.png',title:'Desde la esquina posterior'}
+];
+const current=[
+{src:'antes-hacia-direccion.jpeg',title:'Estado actual · Hacia dirección'},
+{src:'antes-hacia-entrada.jpeg',title:'Estado actual · Hacia la entrada'}
+];
+let items=proposal,index=2;
+const hero=document.getElementById('hero'),caption=document.getElementById('caption'),counter=document.getElementById('count'),thumbs=document.getElementById('thumbs'),download=document.getElementById('download');
+function show(i){index=(i+items.length)%items.length;const v=items[index];hero.src=v.src;hero.alt=v.title;caption.textContent=v.title;counter.textContent='Vista '+(index+1)+' de '+items.length;download.href=v.src;thumbs.querySelectorAll('button').forEach((b,n)=>b.setAttribute('aria-pressed',String(n===index)));}
+function render(){thumbs.replaceChildren();items.forEach((v,n)=>{const b=document.createElement('button');b.className='thumb';b.setAttribute('aria-label',v.title);const im=document.createElement('img');im.src=v.src;im.alt='';im.loading='lazy';const label=document.createElement('span');label.textContent=String(n+1).padStart(2,'0')+' · '+v.title;b.append(im,label);b.onclick=()=>show(n);thumbs.append(b);});show(index);}
+document.getElementById('prev').onclick=()=>show(index-1);document.getElementById('next').onclick=()=>show(index+1);
+document.getElementById('enlarge').onclick=()=>{const full=document.body.classList.toggle('full');document.getElementById('enlarge').textContent=full?'Cerrar':'Ampliar';};
+function mode(before){items=before?current:proposal;index=before?0:2;document.getElementById('before').setAttribute('aria-pressed',String(before));document.getElementById('future').setAttribute('aria-pressed',String(!before));render();}
+document.getElementById('before').onclick=()=>mode(true);document.getElementById('future').onclick=()=>mode(false);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(index+1);if(e.key==='ArrowLeft')show(index-1);if(e.key==='Escape'){document.body.classList.remove('full');document.getElementById('enlarge').textContent='Ampliar';}});
+render();
+</script>
+</body>
+</html>
+
